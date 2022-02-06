@@ -1,0 +1,19 @@
+@import "../../styles/colors";
+
+.form__wrapper {
+    label {
+        width: 100px;
+        text-align: left;
+        margin-left: -260px;
+    }
+    button {
+        width: 366px;
+        height: 48px;
+        border-radius: 12px;
+        background-color: $yellow-button;
+        font-size: 16px;
+        color: $yellow-button-text;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+}

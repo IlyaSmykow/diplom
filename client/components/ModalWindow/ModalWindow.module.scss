@@ -1,0 +1,87 @@
+@import "../../styles/colors";
+
+.modal__open {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: $black-opacity;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__close {
+    display: none;
+}
+
+.modal__redirect_button {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $grey-text;
+    width: 200px;
+    button {
+        width: 50px;
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+.form__wrapper {
+    width: 500px;
+    min-height: 450px;
+    background-color: $white-color;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+    h2 {
+        margin-left: 45px;
+        font-weight: 700;
+        color: $black-opacity;
+    }
+    input {
+        width: 366px;
+        height: 48px;
+        border: 1px solid $grey-light-text;
+        border-radius: 12px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        text-align: left;
+        padding-left: 15px;
+    }
+    p {
+        font-size: 14px;
+        color: $red-color;
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    form {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        label {
+            font-size: 13px;
+            color: $black-text;
+            font-weight: 600;
+        }
+    }
+}
+
+.form__title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__footer {
+    margin-left: 100px;
+}

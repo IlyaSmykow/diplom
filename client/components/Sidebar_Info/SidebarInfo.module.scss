@@ -1,0 +1,16 @@
+@import '../../styles/colors';
+
+.sidebar__info_root {
+    margin-top: 20px;
+}
+
+.name {
+    font-size: 26px;
+    color: $white-color;
+}
+
+.date {
+    margin-top: 20px;
+    font-size: 14px;
+    color: $white-light;
+}

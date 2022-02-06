@@ -1,0 +1,78 @@
+@import "../../styles/colors";
+
+.profile__wrapper {
+    padding-top: 120px;
+    padding-left: 440px;
+    padding-bottom: 20px;
+    height: 100vh;
+    position: relative;
+    h1 {
+        font-size: 58px;
+        color: $blue-ligth;
+        font-weight: 800;
+        line-height: 52px;
+        text-align: left;
+    }
+    label {
+        position: absolute;
+        top: 25px;
+        left: 50px;
+        font-size: 16px;
+        font-weight: 800;
+        color: $blue-text;
+    }
+}
+
+.profile__time {
+    text-align: left;
+    margin-top: 25px;
+    font-size: 18px;
+    color: $black;
+    font-weight: 500;
+    time {
+        font-weight: 800;
+    }
+}
+
+.profile__tabs {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+    &:focus-visible {
+        color: green;
+    }
+    button {
+        width: auto;
+        height: 30px;
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 16px;
+        font-weight: 600;
+        &:active, &:focus {
+            color: $green-text;
+        }
+    }
+}
+
+.posts__wrapper {
+    margin-top: 40px;
+    padding-right: 10px;
+    height: 610px;
+    overflow: scroll;
+}
+
+.posts__wrapper::-webkit-scrollbar {
+    width: 3px;
+}
+
+.posts__wrapper::-webkit-scrollbar-thumb {
+    width: 3px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: $blue-ligth;
+}
+
+.profile__comments_wrapper {
+    @extend .posts__wrapper
+}

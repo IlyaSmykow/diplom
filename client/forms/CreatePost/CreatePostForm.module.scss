@@ -1,0 +1,95 @@
+@import "../../styles/colors";
+
+.form__wrapper {
+    max-width: 720px;
+    padding: 50px 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    .EasyMDEContainer {
+        max-width: 720px;
+        overflow: hidden;
+    }
+}
+
+.form__title {
+    font-size: 42px;
+    font-weight: 800;
+    color: $grey-input-text;
+    input {
+        font-size: 42px;
+        font-weight: 800;
+    }
+    p {
+        margin-top: 10px;
+        font-size: 16px;
+        color: $red-light;
+        font-weight: 600;
+    }
+}
+
+.form__text {
+    margin-top: 15px;
+    text-align: left;
+    input {
+        margin-top: 10px;
+        width: 600px;
+        height: 90px;
+        border: 1px solid $grey-input-text;
+        border-radius: 10px;
+    }
+    label {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    p {
+        margin-top: 10px;
+        font-size: 16px;
+        color: $red-light;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+.form__file {
+    @extend .form__text;
+    input {
+        margin-left: 20px;
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+}
+
+.form__description {
+    margin-top: 30px;
+    max-width: 100%;
+    overflow: hidden;
+    p {
+        margin-top: 10px;
+        font-size: 16px;
+        color: $red-light;
+        font-weight: 600;
+    }
+}
+
+.form__submit_input {
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: 440px;
+    width: 160px;
+    height: 45px;
+    border-radius: 12px;
+    color: $yellow-button-text;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: $yellow-button;
+}

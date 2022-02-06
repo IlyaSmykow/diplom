@@ -1,0 +1,29 @@
+@import "../../styles/colors.scss";
+
+.menu__wrapper {
+    margin-top: 30px;
+    color: $white-color;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 3;
+    li {
+        list-style: none;
+        padding: 25px 45px;
+        cursor: pointer;
+        &:active, &:hover {
+            background-color: $dark-blue;
+        }
+    }
+    a {
+        color: $white-color;
+        padding: 25px 45px;
+        cursor: pointer;
+        &:active, &:hover {
+            background-color: $dark-blue;
+        }
+    }
+}

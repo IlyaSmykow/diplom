@@ -1,0 +1,38 @@
+@import "../../styles/colors";
+
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    input {
+        width: 600px;
+        height: 90px;
+        border: 1px solid $grey-light-text;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    label {
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+
+.button_active {
+    width: 130px;
+    height: 45px;
+    border-radius: 12px;
+    color: $yellow-button-text;
+    background-color: $yellow-button;
+    position: absolute;
+    bottom: -60px;
+    right: 40px;
+}
+
+.button_disabled {
+    @extend .button_active;
+    background-color: $grey-light-text;
+
+}

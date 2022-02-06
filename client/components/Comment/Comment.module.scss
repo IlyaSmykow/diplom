@@ -1,0 +1,59 @@
+@import "../../styles/colors";
+
+.comment__wrapper {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    .comment__icons {
+        display: none;
+    }
+    &:hover {
+        .comment__icons {
+            display: none;
+            width: 60px;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 0px;
+            right: 10px;
+            color:  $grey-light-text;
+        }
+    }
+    input {
+        margin-top: 10px;
+        padding-left: 10px;
+        width: 600px;
+        height: 50px;
+        border: 1px solid $grey-light-text;
+        border-radius: 5px;
+    }
+}
+
+.comment__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: $black;
+    }
+    time {
+        font-size: 12px;
+        color: $grey-light-text;
+    }
+}
+
+.comment__text {
+    padding: 0px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 22px;
+    color: $black;
+    max-width: 80%;
+    text-align: justify;
+}

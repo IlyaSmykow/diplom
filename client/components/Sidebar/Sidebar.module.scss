@@ -1,0 +1,65 @@
+@import '../../styles/colors';
+
+.sidebar__close {
+    width: 100px;
+    background-color: $menu-color;
+    color: $white-color;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    z-index: 3;
+    transition: all ease-in-out .2s;
+    span {
+        writing-mode: vertical-rl;
+        font-size: 20px;
+        transform: rotateZ(180deg);
+        margin-left: 2px;
+    }
+}
+
+.sidebar__open {
+    @extend .sidebar__close;
+    width: 400px;
+    span {
+        display: none;
+    }
+    .sidebar__icon {
+        display: flex;
+        justify-content: center;
+    }
+    .sidebar__menu {
+        background-color: $dark-blue;
+    }
+}
+
+.sidebar__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 50px;
+    z-index: 2;
+    transition: all ease-in-out .2s;
+    width: 100%;
+}
+
+.sidebar__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 13px;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.sidebar__info_open {
+    display: block;
+}
+
+.sidebar__info_close {
+    display: none;
+}

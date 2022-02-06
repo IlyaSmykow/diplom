@@ -1,0 +1,23 @@
+@import './styles/colors';
+
+.App {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  color: $menu-color;
+  display: flex;
+  height: 100%;
+  position: relative;
+  .EasyMDEContainer {
+    max-width: 600px;
+    font-size: 18px;
+    color: $black-two;
+    .CodeMirror {
+      padding: 10px;
+      text-align: left;
+    }
+  }
+}
+

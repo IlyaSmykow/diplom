@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useCallback, useRef, useEffect, useMemo } from "react";
 import { getPost } from "../../redux/reducers/posts_reducer";
 import { useForm } from "react-hook-form";
 import SimpleMDE from "react-simplemde-editor";
@@ -75,6 +75,13 @@ export const EditPostForm = () => {
     reset();
   };
 
+  const autofocusNoSpellcheckerOptions = useMemo(() => {
+    return {
+      autofocus: true,
+      spellChecker: false,
+    };
+  }, []);
+
   return (
     <div className={styles.form__wrapper}>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -104,7 +111,11 @@ export const EditPostForm = () => {
           {errors.file && <p>Выберите изображение</p>}
         </div>
         <div className={styles.form__description}>
-          <SimpleMDE value={value} onChange={changeDescription} />
+          <SimpleMDE
+            value={value}
+            onChange={changeDescription}
+            options={autofocusNoSpellcheckerOptions}
+          />
           {value ? null : <p>Заполните поле</p>}
         </div>
         <input className={styles.form__submit_input} type="submit" />

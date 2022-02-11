@@ -8,7 +8,7 @@ export const postsAPI = {
     return instance.get(`/posts?userId=${userId}`);
   },
   getPost(postId) {
-    return instance.get(`posts/${postId}`);
+    return instance.get(`/${postId}`);
   },
   createPost(data) {
     return instance.post("/posts", data);

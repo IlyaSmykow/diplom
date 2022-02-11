@@ -79,7 +79,7 @@ export const PostPage = () => {
                 <ReactMarkdown>{postData.description}</ReactMarkdown>
               )}
             </div>
-            <div>
+            <div className={styles.comments__wrapper}>
               {isCommentsLoading ? (
                 <div className={styles.comments__loading}>Загрузка...</div>
               ) : (

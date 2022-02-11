@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useCallback, useRef, useEffect, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -63,6 +63,13 @@ export const CreatePostForm = () => {
     reset();
   };
 
+  const autofocusNoSpellcheckerOptions = useMemo(() => {
+    return {
+      autofocus: true,
+      spellChecker: false,
+    };
+  }, []);
+
   return (
     <div className={styles.form__wrapper}>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -91,7 +98,11 @@ export const CreatePostForm = () => {
           />
         </div>
         <div className={styles.form__description}>
-          <SimpleMDE value={value} onChange={onChange} />
+          <SimpleMDE
+            value={value}
+            onChange={onChange}
+            options={autofocusNoSpellcheckerOptions}
+          />
           {value ? null : <p>Заполните поле</p>}
         </div>
         <input className={styles.form__submit_input} type="submit" />

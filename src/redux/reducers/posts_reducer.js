@@ -119,12 +119,16 @@ export const uploadPost = (post) => {
 export const uploadImage = (formData) => {
   return async (dispatch) => {
     try {
+      dispatch(actionsPosts.toggleLoading(true));
       const { data, status } = await postsAPI.uploadImg(formData);
       if (status === 200) {
         return data;
       }
+      dispatch(actionsPosts.toggleLoading(false));
     } catch (error) {
       dispatch(actionsPosts.getError(error.response.data.message));
+    } finally {
+      dispatch(actionsPosts.toggleLoading(false));
     }
   };
 };

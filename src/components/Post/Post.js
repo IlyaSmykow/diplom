@@ -15,7 +15,7 @@ export const Post = ({ id, title, text, createdAt, views, img, userId }) => {
   const date = formatDate(createdAt);
 
   const showPost = (id) => {
-    navigate(`/posts/${id}`);
+    navigate(`/${id}`);
   };
 
   const removePost = () => {

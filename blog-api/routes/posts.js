@@ -9,8 +9,7 @@ const router = express.Router();
 router.get("/", PostController.all);
 
 router.post("/", decodeJwtToken, PostController.create);
-//router.post('/upload', PostController.upload);
-router.post("/build", PostController.upload);
+router.post("/upload", PostController.upload);
 router.get("/:id", PostController.show);
 router.patch(
   "/:id",
